@@ -1,0 +1,37 @@
+---
+title: Where Can I Find & Share Data?
+author:
+  - Jonathan Wheeler^[UNM Research Data Services, jwheel01@unm.edu]
+  - Karl Benedict^[UNM Research Data Services, kbene@unm.edu]
+margin-left: 1in
+margin-right: 1in
+margin-top: .5in
+margin-bottom: .5in
+...
+
+Repositories of various types are increasingly important in the preservation, discovery, access, and reuse of research data. This workshop is focused on fostering a discussion around the various interests that are in play in the development, use, and selection of specific repositories - both as sources for discovering and accessing data for reuse, but also for sharing and preservation of research project products. 
+
+## Classes of Repositories
+
+Repositories may be categorized in a number of different ways, depending upon needs:
+
+* Compliance with standards that define trustworthyness or other measures of reliability, such as
+  * [Trusted Digital Repository (TDR) Checklist](http://www.crl.edu/sites/default/files/d6/attachments/pages/trac_0.pdf)[^TDR], or its successor 
+  * Trustworthy Digital Repositories - [ISO 16363](
+
+
+## A Synthesis
+
+![Intersecting Interests](Venn.png){width=6.5in}\ 
+
+---------------------
+
+| Download this document: [https://unmrds.github.io/bb-discovery/bb-discovery.pdf](https://unmrds.github.io/bb-security/bb-discovery.pdf)
+| Github Repository: [https://github.com/unmrds/bb-discovery](https://github.com/unmrds/bb-discovery)
+
+---------------------
+
+| [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
+| This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/)
+
+[^TDR] RLG-NARA Task Force on Digital Repository and Certification (2007). *Trustworthy Repositories Audit & Certification: Criteria and Checklist*. Version 1, February 2007. Robin L. Dale and Bruce Ambacher, ed. The Center for Research Libraries & OCLC Online Computer Library Center, Inc. [http://www.crl.edu/sites/default/files/d6/attachments/pages/trac_0.pdf](http://www.crl.edu/sites/default/files/d6/attachments/pages/trac_0.pdf)
