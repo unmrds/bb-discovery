@@ -50,8 +50,20 @@ Types of content that those repositories focus on:
 
 ## Open Data: Where?
 
+Requirements for repository services will vary from case to case, and there is no one-size-fits-all solution. Relevant factors include:
 
+* Trusted repository status
+* Capacity and commitment to preservation
+* Provision of permanent identifiers (DOI)
+* Format support
+* Federation, discovery, and interoperability with other systems
 
+Often these and other repository characteristics and policies are documented. Resources for identifying and assessing repositories include:
+
+* PLOS ONE Data Availability policy (includes a [list of recommended repositories](http://journals.plos.org/plosone/s/data-availability)[^PLOS])
+* Nature Scientific Data [Recommended Data Repositories](https://www.nature.com/sdata/policies/repositories)[^NATURE]
+* Scientific Data [recommended repositories](https://figshare.com/articles/Scientific_Data_recommended_repositories_June_2015/1434640)[^SciData]
+* Registry of Research Data Repositories [(re3data.org)](https://www.re3data.org/)[^RE3DATA]
 
 ## A Synthesis
 
@@ -88,6 +100,13 @@ Space data and information transfer systems -- Audit and certification of trustw
 
 [^FAIR]: Nature Scientific Data (2016). The FAIR Guiding Principles for scientific data management and stewardship. [https://www.nature.com/articles/sdata201618](https://www.nature.com/articles/sdata201618)
 
+[^PLOS]: PLOS ONE (2014). *Data Availability.* [http://journals.plos.org/plosone/s/data-availability](http://journals.plos.org/plosone/s/data-availability)
+
+[^NATURE]: Nature Scientific Data (2018). *Recommended Data Repositories.* [https://www.nature.com/sdata/policies/repositories](https://www.nature.com/sdata/policies/repositories)
+
+[^SciData]: Scientific Data (2018). *Scientific Data Recommended Repositories.* [doi:10.6084/m9.figshare.1434640.v11](https://figshare.com/articles/Scientific_Data_recommended_repositories_June_2015/1434640)
+
+[^RE3DATA]: Registry of Research Data Repositories (2018). [https://www.re3data.org/](https://www.re3data.org/)
 
 ------------------------------------
 
