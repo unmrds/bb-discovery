@@ -40,4 +40,3 @@ We note the NSF is currently funding projects around research and data re-use.
 * Beagrie, Neil, and John Houghton. "The Value and Impact of Data Sharing and Curation: A Synthesis of Three Recent Studies of UK Research Data Centres." London: JISC, 2014. http://repository.jisc.ac.uk/5568/1/iDF308_-_Digital_Infrastructure_Directions_Report%2C_Jan14_v1-04.pdf
 * Nature Scientific Data (2016). The FAIR Guiding Principles for scientific data management and stewardship. Accessed 2018-04-26 from [https://www.nature.com/articles/sdata201618](https://www.nature.com/articles/sdata201618)
 * GoFair (n.d.) FAIR Principles. Accessed 2018-04-26 from [https://www.go-fair.org/fair-principles/](https://www.go-fair.org/fair-principles/)
-
