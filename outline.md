@@ -45,8 +45,14 @@ Compliance with standards that define trustworthyness,  measures of reliability,
 
 Types of content that those repositories focus on:
 
-* **Disciplinary repositories** that specialize in content produced by specific research disciplines such as [ICPSR](https://www.icpsr.umich.edu/icpsrweb/landing.jsp)[^ICPSR] for social science data, the [Archaeology Data Service](http://archaeologydataservice.ac.uk/][^ADS] for archaeological data, and [GenBank](http://www.ncbi.nlm.nih.gov/genbank/)[^GenBank] for genetic sequence data. 
+* **Disciplinary repositories** that specialize in content produced by specific research disciplines such as [ICPSR](https://www.icpsr.umich.edu/icpsrweb/landing.jsp)[^ICPSR] for social science data, the [Archaeology Data Service](http://archaeologydataservice.ac.uk/)[^ADS] for archaeological data, and [GenBank](http://www.ncbi.nlm.nih.gov/genbank/)[^GenBank] for genetic sequence data. 
 * **General or Interdisciplinary repositories** that contain content that cross disciplinary boundaries, and may also contain multiple types of content including data, documents, and multi-media files. 
+
+Or, the organizations that host/manage the repositories - frequently as a designated repository for data products produced by or with funds from those organizations. For example:
+
+* [Data.gov](https://catalog.data.gov/dataset)[^DataGov] - the discovery portal for data generated and provided by US Federal Government agencies, and some states, municipalities, and universities
+* NASA's [Distributed Active Archive Centers (DAACS)](https://earthdata.nasa.gov/about/daacs)[^DAAC] - the 12 distributed data centers supported by NASA that provide discovery and access to different thematic collections of Earth science data. 
+* UNM's [digital repository](http://digitalrepository.unm.edu)[^Lobo] - the designated *institutional repository* for the University of New Mexico.  
 
 ## Open Data: Where?
 
@@ -107,6 +113,12 @@ Space data and information transfer systems -- Audit and certification of trustw
 [^SciData]: Scientific Data (2018). *Scientific Data Recommended Repositories.* [doi:10.6084/m9.figshare.1434640.v11](https://figshare.com/articles/Scientific_Data_recommended_repositories_June_2015/1434640)
 
 [^RE3DATA]: Registry of Research Data Repositories (2018). [https://www.re3data.org/](https://www.re3data.org/)
+
+[^DataGov]: Data.gov (2018). [https://catalog.data.gov/dataset](https://catalog.data.gov/dataset)
+
+[^DAAC]: NASA Distributed Active Archive Centers (DAACS) (2018). [https://earthdata.nasa.gov/about/daacs](https://earthdata.nasa.gov/about/daacs)
+
+[^Lobo]: UNM's Institutional Repository (2018). [http://digitalrepository.unm.edu](http://digitalrepository.unm.edu)
 
 ------------------------------------
 
