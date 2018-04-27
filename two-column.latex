@@ -1,0 +1,274 @@
+\documentclass[letterpaper,twoside,10pt]{scrartcl}
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{yfonts}
+\usepackage{multicol}
+\usepackage{librebaskerville}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage{wrapfig}
+\usepackage{tocloft}
+\usepackage{tcolorbox}
+\usepackage{framed}
+\usepackage[headsepline=true, footsepline=false]{scrlayer-scrpage}
+\usepackage{letltxmacro}
+\usepackage{titlesec}
+\usepackage[labelsep=space]{caption}
+\usepackage{endnotes}
+
+\let\footnote=\endnote
+
+\definecolor{mygray}{gray}{0.9}
+
+% define TOC charactereistics
+\setlength{\cftbeforesecskip}{7px}
+\renewcommand{\cftsecdotsep}{3}
+
+% define the page dimensions and margins
+\geometry{
+papersize={8.5in,11in},
+left=.5in,
+top=1in,
+textwidth=7.5in
+}
+\headsep = .25in
+
+% adjust section numbering (disable)
+\setcounter{secnumdepth}{-2}
+
+% adjust section header spacing and lines
+\newcommand{\sectionfont}{\Large\bfseries}
+\titlespacing{\section}{0pt}{\parskip}{-\parskip}
+\titleformat{\section}
+    {\titlerule     
+     \vspace{0.25ex}%
+     \sectionfont}
+    {\thesection}{1em}
+    {\sectionfont}[\vspace{0.25ex}%
+     \sectionfont
+     \titlerule
+     \vspace{0.25ex}%
+     \sectionfont]
+
+
+% Define column definitions
+\setlength{\columnsep}{.25in}
+
+\usepackage{graphicx}
+
+% Header and footer definitions
+%\clearpairofpagestyles
+\lohead{$if(title)$$title$$endif$}
+\rohead{$if(volume)$Vol. $volume$$endif$ $if(issue)$ No. $issue$$endif$}
+\rehead{$if(title)$$title$$endif$}
+\lehead{$if(volume)$Vol. $volume$$endif$ $if(issue)$ No. $issue$$endif$}
+%\chead{\pagemark}
+%\ihead{Title description}
+
+\renewcommand*\pagemark{{\usekomafont{pagenumber}Page\nobreakspace\thepage}}
+\addtokomafont{pageheadfoot}{\upshape}
+
+%==============================================================================
+% Modify the includegraphics command to be wrapped in wrapfigure ==============
+\let\originalincludegraphics\includegraphics
+\LetLtxMacro{\newincludegraphics}{\includegraphics}
+\renewcommand{\includegraphics}[2][\newincludegraphics]%
+    {\begin{wrapfigure}{l}{1.0in}
+    \newincludegraphics[{#1}]{#2}
+    \end{wrapfigure}
+}
+
+%===============================================================================
+
+%\captionsetup{labelformat=empty}
+\renewcommand{\figurename}{}
+\renewcommand{\thefigure}{}
+ 
+
+%==============================================================================
+% Title Stuff  ================================================================
+
+\def\paperslogan{$if(subtitle)$``$subtitle$''$endif$}
+\def\papername{$if(title)$$title$$endif$}
+\def\paperlocation{Albuquerque, NM}
+
+\renewcommand{\maketitle}{
+\vspace*{-40pt}
+\begin{center}
+$if(logo)$
+\originalincludegraphics[width=2in]{$logo$}
+$endif$
+\hfill{\Huge\usefont{T1}{ptm}{b}{it} \papername}\\
+%\vspace*{0.15in}
+\rule[2pt]{\textwidth}{0.25pt}\\
+\paperslogan\\
+\rule[2pt]{\textwidth}{0.5pt}\\
+{$author$\hfill $date$}\\
+\rule[6pt]{\textwidth}{1.2pt}
+\end{center}
+}
+%==============================================================================
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%==============================================================================
+% Deal with longtable issue in multicolumn documents
+% from: http://tex.stackexchange.com/questions/161431/how-to-solve-longtable-is-not-in-1-column-mode-error/224096#224096
+%\makeatletter
+%\let\oldlt\longtable
+%\let\endoldlt\endlongtable
+%\def\longtable{\@ifnextchar[\longtable@i \longtable@ii}
+%\def\longtable@i[#1]{\begin{figure}[t]
+%\onecolumn
+%\begin{minipage}{0.5\textwidth}
+%\oldlt[#1]
+%}
+%\def\longtable@ii{\begin{figure}[t]
+%\onecolumn
+%\begin{minipage}{0.5\textwidth}
+%\oldlt
+%}
+%\def\endlongtable{\endoldlt
+%\end{minipage}
+%\twocolumn
+%\end{figure}}
+%\makeatother
+%==============================================================================
+
+
+
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[utf8]{inputenc}
+$if(euro)$
+  \usepackage{eurosym}
+$endif$
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+$if(mainfont)$
+    \setmainfont{$mainfont$}
+$endif$
+$if(sansfont)$
+    \setsansfont{$sansfont$}
+$endif$
+$if(monofont)$
+    \setmonofont[Mapping=tex-ansi]{$monofont$}
+$endif$
+$if(mathfont)$
+    \setmathfont(Digits,Latin,Greek){$mathfont$}
+$endif$
+\fi
+% use microtype if available
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+$if(natbib)$
+\usepackage{natbib}
+\bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
+$endif$
+$if(biblatex)$
+\usepackage{biblatex}
+$if(biblio-files)$
+\bibliography{$biblio-files$}
+$endif$
+$endif$
+$if(listings)$
+\usepackage{listings}
+$endif$
+$if(lhs)$
+\lstnewenvironment{code}{\lstset{language=Haskell,basicstyle=\small\ttfamily}}{}
+$endif$
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+$if(verbatim-in-note)$
+\usepackage{fancyvrb}
+$endif$
+$if(tables)$
+\usepackage{longtable}
+$endif$
+
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={$author-meta$},
+            pdftitle={$title-meta$},
+            colorlinks=false,
+            citecolor=$if(citecolor)$$citecolor$$else$black$endif$,
+            urlcolor=$if(urlcolor)$$urlcolor$$else$black$endif$,
+            linkcolor=$if(linkcolor)$$linkcolor$$else$black$endif$,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+$if(links-as-notes)$
+% Make links footnotes instead of hotlinks:
+\renewcommand{\href}[2]{#2\footnote{\url{#1}}}
+$endif$
+$if(strikeout)$
+\usepackage[normalem]{ulem}
+% avoid problems with \sout in headers with hyperref:
+\pdfstringdefDisableCommands{\renewcommand{\sout}{}}
+$endif$
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+
+
+$if(title)$
+\title{$title$}
+$endif$
+$if(subtitle)$
+\subtitle{$subtitle$}
+$endif$
+\author{$for(author)$$author$$sep$ \and $endfor$}
+\date{$date$}
+
+\begin{document}
+
+\pagestyle{headings}
+
+$if(title)$
+\thispagestyle{empty}
+\maketitle
+$endif$
+
+\begin{multicols}{2}
+
+$if(toc)$
+{
+\begin{tcolorbox}
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{$toc-depth$}
+\tableofcontents
+\end{tcolorbox}
+}
+$endif$
+
+$body$
+
+\theendnotes
+
+
+\end{multicols}
+
+This work is licensed under a Creative Commons Attribution 4.0 International License - \href{Creative Commons Attribution 4.0 International License}{http://creativecommons.org/licenses/by/4.0/}
+
+\end{document}
